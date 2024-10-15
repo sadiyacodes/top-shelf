@@ -2,7 +2,7 @@ import React from 'react'
 import { Helmet } from "react-helmet"
 import Footer from "./Footer";
 import Header from './Header';
-import { ToastContainer, Bounce } from 'react-toastify';
+import { ToastContainer, Flip } from 'react-toastify';
 const Layout = ({children , title, description , keywords }) => {
   return (
     <>
@@ -30,7 +30,7 @@ const Layout = ({children , title, description , keywords }) => {
 
 Layout.defaultProps={
   title:'Top Shelf',
-  description:"",
+  description:"Top Shelf is a line of curated skincare essentials",
   keywords:"skincare "
 };
 export default Layout
