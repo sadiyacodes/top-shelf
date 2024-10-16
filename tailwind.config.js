@@ -5,6 +5,7 @@ export default {
     extend: {
       colors: {
         brand: "F4D0C4",
+        bgProductCard: "F3F3F3",
         lightGreen: "#e8f5de",
         lightPink: "#f7ecee",
         lightGray: "#E1EAEE",

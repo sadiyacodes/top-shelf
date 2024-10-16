@@ -3,19 +3,30 @@ import axios from 'axios';
 
 const AuthContext = createContext();
 
+export const AuthProvider = ({ children }) => {
+  const [auth, setAuth] = useState({
+    user: null,
+    token: '',
+  });
 
-const AuthProvider = ({children}) => {
+  // default authorization
+  axios.defaults.headers.common['Authorization'] = auth?.token;
 
-    const [auth, setAuth]=useState({
-        user: null,
-        token: '',
-    })
+  useEffect(() => {
+    const parsedData = JSON.parse(localStorage.getItem('auth'));
+    if (parsedData) {
+      setAuth((prev) => {
+        return { ...prev, user: parsedData.user, token: parsedData.token };
+      });
+    }
+  }, []);
 
-    //default authorization
-    axios.defaults.headers.common['Authorization']
   return (
-    
-  )
-}
+    <AuthContext.Provider value={[auth, setAuth]}>
+      {children}
+    </AuthContext.Provider>
+  );
+};
 
-export default Auth
+// custom hook
+export const useAuth = () => useContext(AuthContext);
