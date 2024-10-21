@@ -32,7 +32,7 @@ const Footer = () => {
         </div>
         <p className='text-sm md:text-md text-right'>
             {" "}
-            All rights reserved &copy; SP
+            All rights reserved &copy; TOP SHELF
         </p>
        </div>
     </footer>

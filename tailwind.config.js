@@ -15,6 +15,8 @@ export default {
         darkGray: "#9ea4a7",
         darkYellow: "#ffffc2",
         mid: "white",
+        interactiveBtn: "#E093B2",
+        lightpink: "#FCF1ED",
       },
       fontFamily: {
         ebgm: ["'EB Garamond'", "'sans - serif'"],

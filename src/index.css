@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.alice-carousel {
+    max-width: 1250px; /* Set the maximum width of the carousel */
+    margin: 0 auto;   /* Center the carousel */
+    width: 100%;      /* Ensure the carousel scales responsively */
+  }

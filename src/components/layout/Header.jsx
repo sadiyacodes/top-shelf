@@ -27,13 +27,13 @@ const Header = () => {
   };
   return (
     <>
-      <header className="flex justify-between w-full bg-mid items-center px-4 md:px-10 py-1 font-josefin">
+      <header className="flex justify-between w-full bg-mid items-center px-4 md:px-10 py-1 font-ebgm border-b-2 border-b-slate-200 ">
         <NavLink
           className="w-40 h-20 flex items-center focus:outline-none"
           to="/"
         >
           <img
-            src="/assets/Koolkicks-logo.png"
+            src="/assets/TopShelfLogo.png"
             alt="logo"
             className="w-3/5 md:w-1/2"
           />
@@ -105,7 +105,7 @@ const Header = () => {
                   marginTop: `${!auth.user ? "-0.25rem" : "0.25rem"}`,
                 }}
               ></i>{" "}
-              <span className="w-4 h-4 rounded-full bg-zinc-600 absolute -right-3 -top-2 text-mid text-xs text-center font-raleway">
+              <span className="w-4 h-4 rounded-full bg-zinc-600 absolute -right-3 -top-2 text-mid text-xs text-center font-zilla">
                 {cart?.length}
               </span>
             </NavLink>

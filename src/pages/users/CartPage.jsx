@@ -42,7 +42,7 @@ const CartPage = () => {
   return (
     <Layout title="Checkout  - Top Shelf">
         <div className="py-6 px-4 md:px-6 xl:px-16">
-            <h1 className="text-md md:text-2xl font-josefin w-10/12 px-6 md:mx-auto flex flex-col items-start md:flex-row md:justify-between md:items-center">
+            <h1 className="text-md md:text-2xl font-ebgm w-10/12 px-6 md:mx-auto flex flex-col items-start md:flex-row md:justify-between md:items-center">
               <p>
               <span>Welcome!👋</span>
             <span className="font-semibold">
@@ -77,8 +77,8 @@ const CartPage = () => {
               </div>
              
              {cart.length>=1 ?(
-                <div className="bg-slate-50 font-josefin row-start-1 md:col-start-3 rounded-md shadow-sm ">
-                     <h1 className="text-left pl-6 md:pl-0 md:text-center font-josefin text-sm md:text-lg py-2 ">
+                <div className="bg-slate-50 font-ebgm row-start-1 md:col-start-3 rounded-md shadow-sm ">
+                     <h1 className="text-left pl-6 md:pl-0 md:text-center font-ebgm text-sm md:text-lg py-2 ">
                       {" "}
                     Shopping bag{" "}
                    <i className="fa-solid fa-bag-shopping text-brand"></i>{" "}
@@ -107,7 +107,7 @@ const CartPage = () => {
                 </p>
                 <div className="w-full text-center">
                   <button
-                    className="text-xs md:text-md px-2 md:px-5 py-2 md:py-3 bg-brand rounded-md text-mid font-semibold font-josefin hover:scale-105 transition-all duration-150 w-full sm:w-10/12 md:mx-0 md:w-full"
+                    className="text-xs md:text-md px-2 md:px-5 py-2 md:py-3 bg-brand rounded-md text-mid font-semibold font-ebgm hover:scale-105 transition-all duration-150 w-full sm:w-10/12 md:mx-0 md:w-full"
                     onClick={()=> {
                         if (!auth?.user) {
                             toast.info("Redirecting to login..");

@@ -100,7 +100,7 @@ const Home = () => {
   })
 
   return (
-   <Layout title="Top Shelf:Skincare essentials, Just for You">
+   <Layout title="Top Shelf | Curated Skincare essentials">
      <Carousel/>
 
             {/* Section section  */}
