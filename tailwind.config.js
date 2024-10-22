@@ -15,11 +15,12 @@ export default {
         darkGray: "#9ea4a7",
         darkYellow: "#ffffc2",
         mid: "white",
+        brandred: "#FF3131",
         interactiveBtn: "#E093B2",
         lightpink: "#FCF1ED",
       },
       fontFamily: {
-        ebgm: ["'EB Garamond'", "'sans - serif'"],
+        ebgm: ["'Libre Baskerville'", "'sans-serif'"],
         zilla: ["'Zilla Slab'", "' sans-serif'"],
       },
     },

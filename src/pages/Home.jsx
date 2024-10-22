@@ -95,7 +95,7 @@ const Home = () => {
   //searching functionality
   const searchFilteredProduct = products.filter((product)=>{
     return product?.name
-    ?.LowerCase().
+    ?.toLowerCase().
     includes(searchField.toLocaleLowerCase());
   })
 

@@ -27,7 +27,7 @@ const Header = () => {
   };
   return (
     <>
-      <header className="flex justify-between w-full bg-mid items-center px-4 md:px-10 py-1 font-ebgm border-b-2 border-b-slate-200 ">
+      <header className="flex justify-between w-full bg-mid text-gray-600 items-center px-4 md:px-10 py-1 font-ebgm border-b-2 border-b-slate-200 ">
         <NavLink
           className="w-40 h-20 flex items-center focus:outline-none"
           to="/"
@@ -40,28 +40,28 @@ const Header = () => {
         </NavLink>
         <div className="space-x-4 flex items-center relative px-4 md:px-0">
           <div
-            className="hidden md:flex flex-col gap-1 group"
+            className="hidden md:flex flex-col gap-1 group hover:text-brandred"
             style={{
               marginTop: `${!auth.user ? "0px" : "0.5rem"}`,
             }}
           >
             <NavLink to="/">Home</NavLink>
-            <div className="scale-0 group-hover:scale-100 bg-black h-[2px] w-full transition-all duration-300"></div>
+            <div className="scale-0 group-hover:scale-100 bg-brandred h-[2px] w-full transition-all duration-300"></div>
           </div>
           {!auth.user && (
-            <div className="flex flex-col gap-1 group">
+            <div className="flex flex-col gap-1 group hover:text-brandred">
               <NavLink to="/register" className="transition-all duration-750">
                 Register
               </NavLink>
-              <div className="scale-0 group-hover:scale-100 bg-black h-[2px] w-full transition-all duration-300"></div>
+              <div className="scale-0 group-hover:scale-100 bg-brandred h-[2px] w-full transition-all duration-300"></div>
             </div>
           )}
           {!auth.user && (
-            <div className="flex flex-col gap-1 group ">
+            <div className="flex flex-col gap-1 group hover:text-brandred ">
               <NavLink to="/login" className="transition-all duration-750 ">
                 Login
               </NavLink>
-              <div className="scale-0 group-hover:scale-100 bg-black h-[2px] w-full transition-all duration-300"></div>
+              <div className="scale-0 group-hover:scale-100 bg-brandred h-[2px] w-full transition-all duration-300"></div>
             </div>
           )}
           {!auth.user || (
@@ -69,7 +69,7 @@ const Header = () => {
               <Link className="inline-flex gap-x-2 w-full justify-center rounded-md bg-transparent px-3 py-1 text-sm font-semibold text-gray-900 border-none peer ">
                 {FullName[0]}
                 <svg
-                  className="-mr-1 h-5 w-5 text-black"
+                  className="-mr-1 h-5 w-5 text-black "
                   viewBox="0 0 20 20"
                   fill="currentColor"
                   aria-hidden="true"
@@ -100,7 +100,7 @@ const Header = () => {
           <div className="flex flex-col gap-1 group">
             <NavLink to="/cart" className="relative">
               <i
-                className="fa-solid fa-cart-shopping text-brand text-xl"
+                className="fa-solid fa-cart-shopping text-[#c0392b] text-xl"
                 style={{
                   marginTop: `${!auth.user ? "-0.25rem" : "0.25rem"}`,
                 }}
