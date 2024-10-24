@@ -134,7 +134,7 @@ const Home = () => {
               <div className="w-full">
                 <input
                   type="range"
-                  className="accent-brand w-full cursor-pointer"
+                  className="accent-brandred w-full cursor-pointer"
                   min="0"
                   max="40000"
                   step="10000"
@@ -147,7 +147,7 @@ const Home = () => {
               </div>
 
               <button
-                className="text-sm bg-brand text-mid font-zilla font-semibold px-4 py-2 rounded-md shadow-md hover:scale-95 transition-all duration-300"
+                className="text-sm text-brandred bg-mid font-zilla font-semibold px-4 py-2 rounded-md shadow-md hover:scale-95 transition-all duration-300"
                 onClick={() => window.location.reload()}
               >
                 {" "}

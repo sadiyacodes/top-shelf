@@ -1,6 +1,6 @@
 import React from 'react'
 import Layout from '../../components/layout/Layout'
-import ProfileView from "../..components/ProfileView"
+import ProfileView from '../../components/ProfileView';
 import UserMenu from '../../components/UserMenu';
 import { useAuth } from '../../contexts/Auth';
 

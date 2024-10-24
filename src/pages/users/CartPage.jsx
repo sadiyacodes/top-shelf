@@ -1,13 +1,14 @@
 import Layout from "../../components/layout/Layout";
 import React, { useEffect, useState } from "react";
 import { useCart } from "../../contexts/Cart";
+import {useAuth} from "../../contexts/Auth";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import ProductListedCart from "../ProductListedCart";
 import axios from "axios";
 
 const CartPage = () => {
-
+    const [auth, setAuth]= useAuth();
     const[cart, setCart] = useCart();
     const [amountToAdd, setAmountToAdd] = useState(0);
 
@@ -27,6 +28,7 @@ const CartPage = () => {
             console.error(error);
         }
     }
+
     const totalCartValue = ()=>{
         try{
            let totalMRP =0;
@@ -36,6 +38,60 @@ const CartPage = () => {
         }
         catch(error){
         }
+    };
+
+    const paymenthandler = async (amount) =>{
+      try{
+          const{
+           data : { key },
+              } = await axios.get(`${import.meta.env.VITE_BACKEND_API}/api/getkey`);
+        
+            const { data } = await axios.post(`${import.meta.env.VITE_BACKEND_API}/api/checkout`,
+              {
+            amount
+              }
+             );
+
+        const options ={
+          key, 
+          amount : data?.order?.amount,
+          currency: "INR",
+          name : "Top Shelf",
+          description : "One solution for all your skincare needs",
+          image: "https://postimage.me/images/2024/10/24/TopShelfLogo.png",
+          order_id : data?.order?.id,
+          callback_url : `${
+          import.meta.env.VITE_BACKEND_API
+        }/api/paymentverification`,
+
+        handler : function (){
+          toast.success("Payment Done, Redirecting...");
+          setTimeout(()=>{
+            navigate("/");
+            setCart([]);
+            localStorage.setItem("cart",JSON.stringify([]));
+          }, 1500 );
+         },
+         prefill : {
+          name : "Top Shelf",
+          email : "payments@topshelf.com",
+          contact : "9999999999",
+         },
+         notes : {
+          address : "Razorpay Corporate Office"
+         },
+         theme: {
+          color: "#e3a59f",
+         },
+        };
+
+   const razor = new window.Razorpay(options);
+    razor.open();
+      }
+      catch(error)
+      {
+        console.error(error);
+      }
     }
 
 
@@ -81,7 +137,7 @@ const CartPage = () => {
                      <h1 className="text-left pl-6 md:pl-0 md:text-center font-ebgm text-sm md:text-lg py-2 ">
                       {" "}
                     Shopping bag{" "}
-                   <i className="fa-solid fa-bag-shopping text-brand"></i>{" "}
+                   <i className="fa-solid fa-bag-shopping text-cartcolor"></i>{" "}
                     </h1>
                     <div className="flex flex-col w-full px-6 py-6 space-y-6 md:space-y-8">
                     <h2 className="text-md font-semibold w-full ">
@@ -107,7 +163,7 @@ const CartPage = () => {
                 </p>
                 <div className="w-full text-center">
                   <button
-                    className="text-xs md:text-md px-2 md:px-5 py-2 md:py-3 bg-brand rounded-md text-mid font-semibold font-ebgm hover:scale-105 transition-all duration-150 w-full sm:w-10/12 md:mx-0 md:w-full"
+                    className="text-xs md:text-md px-2 md:px-5 py-2 md:py-3 bg-cartcolor rounded-md text-mid font-semibold font-zilla hover:scale-105 transition-all duration-150 w-full sm:w-10/12 md:mx-0 md:w-full"
                     onClick={()=> {
                         if (!auth?.user) {
                             toast.info("Redirecting to login..");
@@ -147,7 +203,7 @@ const CartPage = () => {
               </p>
               <Link
                 type="submit"
-                className="w-full md:w-10/12 lg:w-3/5 mx-auto bg-brand text-mid hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-bold rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 font-josefin"
+                className="w-full md:w-10/12 lg:w-3/5 mx-auto bg-cartcolor text-mid hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-bold rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 font-zilla tracking-wider"
                 to="/"
               >
                 Start Shopping

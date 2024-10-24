@@ -25,7 +25,7 @@ const ProductListedCart = ({
         
         <div className=" flex space-x-4 w-full">
            <div
-          className="w-40 h-28  rounded-full"
+          className="w-40 h-28 rounded-full "
           style={{
             backgroundColor: `${blobColBg}`,
           }}
@@ -61,7 +61,7 @@ const ProductListedCart = ({
         onClick={()=>{
           if(counter > 1)
           {
-            setCounter((prev)=> prev+1);
+            setCounter((prev)=> prev-1);
             setAmountToAdd((prev) => eval(prev - price));
           }
           else{

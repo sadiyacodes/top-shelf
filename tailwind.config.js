@@ -4,16 +4,9 @@ export default {
   theme: {
     extend: {
       colors: {
-        brand: "F4D0C4",
-        bgProductCard: "F3F3F3",
-        lightGreen: "#e8f5de",
-        lightPink: "#f7ecee",
-        lightGray: "#E1EAEE",
-        lightYellow: "#ffffe1",
-        darkGreen: "#d9eec8",
-        darkPink: "#f2e0e2",
-        darkGray: "#9ea4a7",
-        darkYellow: "#ffffc2",
+        brand: "#F4D0C4",
+        bgProductCard: "#F3F3F3",
+        cartcolor: "#c0392b",
         mid: "white",
         brandred: "#FF3131",
         interactiveBtn: "#E093B2",

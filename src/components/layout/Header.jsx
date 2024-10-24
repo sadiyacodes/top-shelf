@@ -29,7 +29,7 @@ const Header = () => {
     <>
       <header className="flex justify-between w-full bg-mid text-gray-600 items-center px-4 md:px-10 py-1 font-ebgm border-b-2 border-b-slate-200 ">
         <NavLink
-          className="w-40 h-20 flex items-center focus:outline-none"
+          className="w-40 h-20 flex items-center focus:outline-none overflow-hidden"
           to="/"
         >
           <img
@@ -100,7 +100,7 @@ const Header = () => {
           <div className="flex flex-col gap-1 group">
             <NavLink to="/cart" className="relative">
               <i
-                className="fa-solid fa-cart-shopping text-[#c0392b] text-xl"
+                className="fa-solid fa-cart-shopping text-cartcolor text-xl"
                 style={{
                   marginTop: `${!auth.user ? "-0.25rem" : "0.25rem"}`,
                 }}
