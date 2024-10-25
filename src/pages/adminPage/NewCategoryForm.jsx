@@ -15,6 +15,7 @@ const NewCategoryForm = ({handleSubmit , name, setName, isCreate}) => {
       }}
       placeholder='Enter New Category'
       value={name}
+      required
       />
       <button className="text-xs md:text-md px-2 md:px-5 py-2 md:py-3 bg-teal-300 rounded-md text-gray-700 font-semibold font-ebgm hover:scale-105 transition-all duration-150">
       {!isCreate ? 'Create' : 'Update'}

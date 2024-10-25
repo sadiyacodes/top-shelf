@@ -166,9 +166,10 @@ const CreateCategory = () => {
             style={{paddingTop : '15px'}}>
              <NewCategoryForm
              name={updatedName}
-             setUpdatedName={updatedName}
+             setName={setUpdatedName}
              handleSubmit={handleUpdated}
-             isCreate={isModalVisible}/>
+             isCreate={isModalVisible}
+            />
            </Modal>
          </div>
          </div>

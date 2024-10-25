@@ -11,7 +11,7 @@ const AllCategoryContainer = ({
 
     const handleEdit = ()=>{
         setEditClicked(true);
-        editCategory(editClicked);
+        editCategory(true);
         setUpdatedName(category?.name);
         setCategorySelected(category);
     }
