@@ -29,7 +29,7 @@ const UserProductCard = ({
           />
          </div>
           <div className="flex flex-col space-y-2 items-start justify-center w-full px-2">
-            <div className="text-sm md:text-md font-semibold w-full">
+            <div className="text-sm md:text-md font-semibold w-full h-16">
             {product?.name}
             </div>
             <div className="text-xs w-full text-[#7C8D97]">
@@ -49,9 +49,9 @@ const UserProductCard = ({
                 className="text-xs md:text-md px-2 md:px-5 py-2 md:py-3 bg-black rounded-md text-mid font-semibold font-josefin hover:scale-105 transition-all duration-150 w-full sm:w-10/12 md:mx-0 md:w-full z-30"
              onClick={(event)=>{
                 event.stopPropagation();
-                if(cartOrder.includes(product?.id)){
+                if(cartOrder.includes(product?._id)){
                     setCart([...cart]);
-                    localStorage.setItem("cart", JSON.stringify([...cart, product]));
+                    localStorage.setItem("cart", JSON.stringify([...cart]));
                     toast.info("Already in your cart");
                 }
                 else{

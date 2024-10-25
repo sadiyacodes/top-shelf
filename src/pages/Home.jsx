@@ -76,7 +76,7 @@ const Home = () => {
         allChecked =[...checked];
         if(isChecked)
         {
-          allChecked.push(id)
+          allChecked.push(_id)
         }
         else{
           allChecked =allChecked.filter(
