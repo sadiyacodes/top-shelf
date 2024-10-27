@@ -26,19 +26,19 @@ const AdminMenu = ({ width }) => {
       </h2>
       <div className='flex md:flex-col space-x-3 md:space-x-0 md:space-y-4'>
         <NavLink to="/dashboard/admin/create-category"
-        className="w-1/2 bg-brand text-mid hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-xs md:text-sm px-2 py-2 md:px-5 md:py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 font-josefin hover:scale-105 transition-all duration-150">
+        className="w-1/2 bg-greybtn text-mid hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-xs md:text-sm px-2 py-2 md:px-5 md:py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 font-josefin hover:scale-105 transition-all duration-150">
           Create Category
         </NavLink>
         <NavLink
           to="/dashboard/admin/create-product"
-          className="w-1/2 bg-brand text-mid hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-xs md:text-sm px-2 py-2 md:px-5 md:py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 font-josefin hover:scale-105 transition-all duration-150"
+          className="w-1/2 bg-greybtn text-mid hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-xs md:text-sm px-2 py-2 md:px-5 md:py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 font-josefin hover:scale-105 transition-all duration-150"
         >
           Create Product
         </NavLink>
 
         <NavLink
           to="/dashboard/admin/products"
-          className="w-1/2 bg-brand text-mid hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-xs md:text-sm px-2 py-2 md:px-5 md:py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 font-josefin hover:scale-105 transition-all duration-150"
+          className="w-1/2 bg-greybtn text-mid hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-xs md:text-sm px-2 py-2 md:px-5 md:py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 font-josefin hover:scale-105 transition-all duration-150"
         >
           Show all Products
         </NavLink>

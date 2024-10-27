@@ -83,13 +83,13 @@ const Header = () => {
               </Link>
               <div className="flex-col hidden  group-hover:flex absolute border-2 border-dark rounded-md z-10">
                 <NavLink
-                  className="bg-gray-100 p-2 hover:bg-brand hover:text-mid rounded-t-md"
+                  className="bg-gray-100 p-2 hover:bg-greybtn/50 hover:text-mid rounded-t-md"
                   to={`/dashboard/${auth?.user?.role === 1 ? "admin" : "user"}`}
                 >
                   Dashboard
                 </NavLink>
                 <NavLink
-                  className="bg-gray-100 p-2 hover:bg-brand hover:text-mid rounded-b-md"
+                  className="bg-gray-100 p-2 hover:bg-greybtn/50 hover:text-mid rounded-b-md"
                   onClick={handleLogout}
                 >
                   Log out

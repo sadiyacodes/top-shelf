@@ -11,6 +11,7 @@ export default {
         brandred: "#FF3131",
         interactiveBtn: "#E093B2",
         lightpink: "#FCF1ED",
+        greybtn: "#67645E",
       },
       fontFamily: {
         ebgm: ["'Libre Baskerville'", "'sans-serif'"],

@@ -29,20 +29,20 @@ const UserMenu = () => {
         <div className="flex md:flex-col space-x-3 md:space-x-0 md:space-y-4">
         <NavLink
           to="/dashboard/user/edit-profile"
-          className="w-1/2 bg-interactiveBtn text-mid  focus:ring-4 focus:outline-none  font-medium rounded-lg text-xs md:text-sm px-2 py-2 md:px-5 md:py-2.5 text-center  hover:scale-105 transition-all duration-150"
+          className="w-1/2 bg-greybtn text-mid  focus:ring-4 focus:outline-none  font-medium rounded-lg text-xs md:text-sm px-2 py-2 md:px-5 md:py-2.5 text-center  hover:scale-105 transition-all duration-150"
         >
           Edit Profile
         </NavLink>
 
         <NavLink
           to="/cart"
-          className="w-1/2 bg-interactiveBtn text-mid  focus:ring-4 focus:outline-none  font-medium rounded-lg text-xs md:text-sm px-2 py-2 md:px-5 md:py-2.5 text-center  hover:scale-105 transition-all duration-150"
+          className="w-1/2 bg-greybtn text-mid  focus:ring-4 focus:outline-none  font-medium rounded-lg text-xs md:text-sm px-2 py-2 md:px-5 md:py-2.5 text-center  hover:scale-105 transition-all duration-150"
         >
           Cart
         </NavLink>
 
         <NavLink
-          className="w-1/2 bg-[#CE2C31] text-mid  focus:ring-4 focus:outline-none  font-medium rounded-lg text-xs md:text-sm px-2 py-2 md:px-5 md:py-2.5 text-center  hover:scale-105 transition-all duration-150"
+          className="w-1/2 bg-brandred text-mid  focus:ring-4 focus:outline-none  font-medium rounded-lg text-xs md:text-sm px-2 py-2 md:px-5 md:py-2.5 text-center  hover:scale-105 transition-all duration-150"
           onClick={handleLogout}
         >
           Logout

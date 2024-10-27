@@ -71,20 +71,17 @@ const Home = () => {
   }
 
   //handle filter Category
-  const handleFilterCategory = async(isChecked, _id)=>{
-    try{
-        allChecked =[...checked];
-        if(isChecked)
-        {
-          allChecked.push(_id)
-        }
-        else{
-          allChecked =allChecked.filter(
-            (categorySelected)=>categorySelected != id
-          );
-        }
-        setChecked(allChecked);
-
+   const handleFilterCategory = async (isChecked, id) => {
+    try {
+      allChecked = [...checked];
+      if (isChecked) {
+        allChecked.push(id);
+      } else {
+        allChecked = allChecked.filter(
+          (categorySelected) => categorySelected !== id
+        );
+      }
+      setChecked(allChecked);
     }
     catch(error)
     {
@@ -113,7 +110,7 @@ const Home = () => {
                 {" "}
                 Filter by Category
               </h1>
-              <div className="w-full flex-col space-y-3 mt-6">
+              <div className="w-full text-black/80 flex-col space-y-3 mt-6">
                 {categories.map((category, index) => (
                   <FilterCategory
                     key={index}
@@ -134,7 +131,7 @@ const Home = () => {
               <div className="w-full">
                 <input
                   type="range"
-                  className="accent-brandred w-full cursor-pointer"
+                  className="accent-greybtn w-full cursor-pointer"
                   min="0"
                   max="40000"
                   step="10000"
@@ -147,7 +144,7 @@ const Home = () => {
               </div>
 
               <button
-                className="text-sm text-brandred bg-mid font-zilla font-semibold px-4 py-2 rounded-md shadow-md hover:scale-95 transition-all duration-300"
+                className="text-sm text-white bg-greybtn font-zilla font-semibold px-4 py-2 rounded-md shadow-md hover:scale-95 transition-all duration-300"
                 onClick={() => window.location.reload()}
               >
                 {" "}

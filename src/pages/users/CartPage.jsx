@@ -199,7 +199,7 @@ const CartPage = () => {
                 Your bag is empty ☹️
               </h2>
               <p className="text-xs md:text-sm font-josefin text-center">
-                This feels too light!! Go bag some sneakers for yourself.
+                This feels too light!! Go bag some skincare essentials for yourself.
               </p>
               <Link
                 type="submit"

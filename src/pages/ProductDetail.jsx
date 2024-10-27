@@ -59,7 +59,7 @@ const ProductDetail = () => {
   return (
     <Layout title={`${product?.name} Page - Top Shelf`}>
      <div className="py-16">
-      <div className="flex flex-col bg-brand px-4 py-6 md:py-18 space-y-6 shadow-md w-full sm:w-9/12 md:w-2/3 lg:w-1/2 mx-auto rounded-lg transition-all duration-200">
+      <div className="flex flex-col bg-brand/50 px-4 py-6 md:py-18 space-y-6 shadow-md w-full sm:w-9/12 md:w-2/3 lg:w-1/2 mx-auto rounded-lg transition-all duration-200">
           {isLoading ? (<Loading/>):(
             <>
               <div className="flex flex-col space-y-10 md:space-y-0  sm:flex-row pl-2 md:pl-12 md:space-x-6 w-full py-2 md:py-8 transition-all duration-200">
@@ -76,7 +76,7 @@ const ProductDetail = () => {
                 <div className=" flex flex-col space-y-6 items-center sm:items-start justify-center w-full pr-2 font-ebgm md:px-8">
                   <div className="flex justify-between items-center md:items-start">
                   <div className="w-2/3 flex-col items-start space-y-4 px-8 md:px-4">
-                     <div className="text-md md:text-md font-semibold w-full ">
+                     <div className="text-md md:text-md font-semibold w-full uppercase tracking-widest ">
                         {product?.name}
                       </div>
 
@@ -90,11 +90,11 @@ const ProductDetail = () => {
                         <span className="font-semibold">Description:</span>
                         <p className="font-medium">
                           {isFullDescription
-                            ? product?.description?.substring(0, 150)
+                            ? product?.description?.substring(0, 500)
                             : product?.description?.substring(0, 60)}{" "}
                           ...
                           <a
-                            className="font-semibold underline underline-offset-2"
+                            className="font-semibold text-black/50 underline underline-offset-2"
                             onClick={() =>
                               setIsFullDescription((prev) => {
                                 return !prev;
@@ -118,7 +118,7 @@ const ProductDetail = () => {
 
               <div className=" px-4 w-full md:w-2/3  text-center mx-auto">
                 <button
-                  className="text-xs md:text-md px-2 md:px-5 py-2 md:py-3 bg-brand rounded-md text-mid font-semibold font-ebgm hover:scale-105 transition-all duration-150 w-full  md:mx-0 "
+                  className="text-xs md:text-md px-2 md:px-5 py-2 md:py-3 bg-brandred rounded-md text-mid font-semibold font-ebgm hover:scale-105 transition-all duration-150 w-full  md:mx-0 "
                   onClick={(event) => {
                     event.stopPropagation();
                       if (cartOrder.includes(product?._id)) {

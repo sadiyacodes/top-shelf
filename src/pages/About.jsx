@@ -23,6 +23,7 @@ const About = () => {
             </div>
 
             <div className="flex p-4 w-full">
+            <div className="flex space-x-6 mx-auto">
             <a href="https://twitter.com/sadiya__24" target="_blank">
                   <i className="fa-brands fa-twitter text-2xl cursor-pointer"></i>
                 </a>
@@ -38,6 +39,7 @@ const About = () => {
                 >
                   <i className="fa-brands fa-linkedin text-2xl cursor-pointer"></i>
                 </a>
+                </div>
                 </div>
         </div>
        </div>
