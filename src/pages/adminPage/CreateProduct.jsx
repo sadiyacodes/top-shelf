@@ -9,7 +9,7 @@ const {Option}= Select;
 
 const CreateProduct = () => {
     const [categories, setCategories] = useState([{}]);
-    const[category, setCategory]= useState('');
+    const[category, setCategory]= useState(null);
     const[name, setName]=useState('');
     const[description, setDescription]= useState('');
     const [price, setPrice]=useState('');
@@ -40,7 +40,8 @@ const CreateProduct = () => {
       const clearState = () =>{
         setName('');
         setDescription('');
-        setCategory('');
+        setCategory(null);
+        setPrice('');
         setImage('');
         setQuantity('');
       }
@@ -48,6 +49,30 @@ const CreateProduct = () => {
       //handling create product
       const handleCreateProduct = async (event) =>{
         event.preventDefault();
+        if (!category) {
+          toast.error("Please select a category before submitting");
+          return;  // Stop further execution
+        }
+        if (!image) {
+          toast.error("Please select an image before submitting");
+          return;  // Stop further execution
+        }
+        if (!name) {
+          toast.error("Please provide a name before submitting");
+          return;  // Stop further execution
+        }
+        if (!description) {
+          toast.error("Please provide description before submitting");
+          return;  // Stop further execution
+        }
+        if (!price) {
+          toast.error("Please provide price before submitting");
+          return;  // Stop further execution
+        }
+        if (!quantity) {
+          toast.error("Please provide quantity before submitting");
+          return;  // Stop further execution
+        }
         try{
             // creating a form data to get the images
             const productDetail = new FormData();  // JS object stores in key/value pairs , easy to send data and other files format such as images- acceptance is better
@@ -90,10 +115,15 @@ const CreateProduct = () => {
                 placeholder="Select a Category"
                 style={{ width: '100%' }}
                 showSearch
+                value={category}
+                required
                 onChange={(value) => {
                   setCategory(value);
                 }}
               >
+                <Option value={null} disabled>
+                    Select a Category
+                </Option>
                 {categories.map((category, index)=>{
                     return(<Option
                         key={index}
