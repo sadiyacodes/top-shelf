@@ -9,8 +9,8 @@ import About from "./pages/About";
 
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
-import PrivateRoute from "./components/privateRoutes/PrivateRoute"
-import DashBoard from "./pages/users/DashBoard";
+import PrivateRoute from "./components/privateRoutes/PrivateRoute";
+import DashBoard from "./pages/users/Dashboard";
 import AdminDashboard from "./pages/adminPage/AdminDashboard";
 import PrivateAdminRoute from "./components/privateRoutes/PrivateAdminRoute";
 import CreateCategory from "./pages/adminPage/CreateCategory";
