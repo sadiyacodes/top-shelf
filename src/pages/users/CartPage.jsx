@@ -19,7 +19,7 @@ const CartPage = () => {
     {
         try{
             let userCart = [...cart];
-            let removedIndex = userCart.findIndex((item)=> item.id === id);
+            let removedIndex = userCart.findIndex((item)=> item._id === id);
             userCart.splice(removedIndex, 1);
             setCart(userCart);
             localStorage.setItem("cart",JSON.stringify(userCart));
